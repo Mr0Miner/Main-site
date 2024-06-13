@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Read More - %name%</title>
-    <link rel="stylesheet" href="../../../../styles.css">
-    <link rel="shortcut icon" href="../../../../M-W.png" type="image/x-icon">
+    <title>Read More - Show-Time</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="shortcut icon" href="../../../M-W.png" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazir&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>%name%</h1>
+            <h1>Show-Time</h1>
             <nav>
                 <ul>
                     <li><a href="/"><i class="fas fa-home"></i> Home Page</a></li>
@@ -24,33 +24,79 @@
         <div class="container">
             <section class="read-more">
                 <h2>Description</h2>
-                <p>%Description%</p>
+                <p>The following HTML code displays a live clock on a web page.<br> This code updates the current time using JavaScript and displays it automatically every second.</p>
 
                 <h2>Code</h2>
-                <h3><i class="fab fa-html5" style="font-size:30px"></i> HTML <span>%name%.html</span></h3>
+                <h3><i class="fab fa-html5" style="font-size:30px"></i> HTML <span>index.html</span></h3>
                 <div class="code-container">
 <pre><code>
-html code
+&lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;link rel="icon" href="././M-W.png" type="image/png"&gt;
+        &lt;link rel="stylesheet" href="style.css"&gt;
+        &lt;title&gt;Show Time | By Mr.Miner&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h2&gt;Time now is:&lt;/h2&gt;
+        &lt;h3 id="time"&gt;&lt;/h3&gt;
+        &lt;p&gt;hidden text&lt;/p&gt;
+    
+        &lt;script src="script.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
 </code></pre>
                     <button class="copy-btn" id="copy-html" onclick="copyCode('copy-html')">
                         <i class="fa fa-copy"></i>
                         <span class="copy-check" id="check-html">✔</span>
                     </button>
                 </div>
-                <h3><i class="fab fa-css3-alt" style="font-size:30px"></i> CSS <span>%name%.css</span></h3>
+                <h3><i class="fab fa-css3-alt" style="font-size:30px"></i> CSS <span>style.css</span></h3>
                 <div class="code-container">
 <pre><code>
-css code
+body {
+    background: black;
+    color: wheat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h2, h3, p {
+    margin: 0;
+    font-family: "Comic Sans MS";
+    font-size: 600%;
+}
+
+p {
+    color: black;
+    font-size: 100%;
+}
 </code></pre>
                     <button class="copy-btn" id="copy-css" onclick="copyCode('copy-css')">
                         <i class="fa fa-copy"></i>
                         <span class="copy-check" id="check-css">✔</span>
                     </button>
                 </div>
-                <h3><i class="fab fa-js" style="font-size:30px"></i> JS <span>%name%.js</span></h3>
+                <h3><i class="fab fa-js" style="font-size:30px"></i> JS <span>script.js</span></h3>
                 <div class="code-container">
 <pre><code>
-js code
+function updateTime() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    
+    const formattedTime = `${hours}:${minutes}:${seconds}`;
+    
+    document.getElementById('time').textContent = formattedTime;
+}
+
+setInterval(updateTime, 10);
+updateTime();
 </code></pre>
                     <button class="copy-btn" id="copy-js" onclick="copyCode('copy-js')">
                         <i class="fa fa-copy"></i>
@@ -59,14 +105,15 @@ js code
                 </div>
 
                 <h2>Related Images</h2>
-                <img src="https://github.com/Mr0Miner/%link%?raw=true" alt="can't load image" class="example-image">
+                <img src="https://github.com/Mr0Miner/Show-Time/raw/master/img/time.JPG" alt="can't load image" class="example-image">
 
                 <h2>Tags</h2>
-                <a href="#"><button class="tags-btn">more ...</button></a>
+                <a href="#"><button class="tags-btn">Time</button></a>
                 <a href="#"><button class="tags-btn">html</button></a>
                 <a href="#"><button class="tags-btn">Code</button></a>
                 <a href="#"><button class="tags-btn">Miner-Site</button></a>
                 <a href="#"><button class="tags-btn">Show-Code</button></a>
+                <a href="#"><button class="tags-btn">Time-Show</button></a>
 
             </section>
         </div>
@@ -76,6 +123,6 @@ js code
             <p>© 2024 All rights reserved.</p>
         </div>
     </footer>
-    <script src="../../../../script.js"></script>
+    <script src="../../..//script.js"></script>
 </body>
 </html>
