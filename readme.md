@@ -1,1 +1,1 @@
-# There is no description, just refer to the [this link](https://mr0miner.github.io/Main-site/)
+# There is no description, just refer to [this link](https://mr0miner.github.io/Main-site/)
