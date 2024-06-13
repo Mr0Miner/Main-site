@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read More - Show-Time</title>
+    <link rel="stylesheet" href="../../../../styles.css">
+    <link rel="shortcut icon" href="../../../../M-W.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazir&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>%name%</h1>
+            <nav>
+                <ul>
+                    <li><a href="/"><i class="fas fa-home"></i> Home Page</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="read-more">
+                <h2>Description</h2>
+                <p>%Description%</p>
+
+                <h2>Code</h2>
+                <h3>HTML</h3>
+                <div class="code-container">
+<pre><code>
+html code
+</code></pre>
+                    <button class="copy-btn" id="copy-html" onclick="copyCode('copy-html')">
+                        <i class="fa fa-copy"></i>
+                        <span class="copy-check" id="check-html">✔</span>
+                    </button>
+                </div>
+                <h3>CSS</h3>
+                <div class="code-container">
+<pre><code>
+css code
+</code></pre>
+                    <button class="copy-btn" id="copy-css" onclick="copyCode('copy-css')">
+                        <i class="fa fa-copy"></i>
+                        <span class="copy-check" id="check-css">✔</span>
+                    </button>
+                </div>
+                <h3>JS</h3>
+                <div class="code-container">
+<pre><code>
+js code
+</code></pre>
+                    <button class="copy-btn" id="copy-js" onclick="copyCode('copy-js')">
+                        <i class="fa fa-copy"></i>
+                        <span class="copy-check" id="check-js">✔</span>
+                    </button>
+                </div>
+
+                <h2>Related Images</h2>
+                <img src="https://github.com/Mr0Miner/%link%?raw=true" alt="can't load image" class="example-image">
+
+                <h2>Tags</h2>
+                <a href="#"><button class="tags-btn">more ...</button></a>
+                <a href="#"><button class="tags-btn">html</button></a>
+                <a href="#"><button class="tags-btn">Code</button></a>
+                <a href="#"><button class="tags-btn">Miner-Site</button></a>
+                <a href="#"><button class="tags-btn">Show-Code</button></a>
+
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>© 2024 All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="../../../../script.js"></script>
+</body>
+</html>
