@@ -20,6 +20,10 @@ body {
     margin: 0;
     margin-top: 20px;
 }
+.container span {
+    font-size: 50%;
+    font-weight: normal;
+}
 
 header {
     background-color: #343a40;
