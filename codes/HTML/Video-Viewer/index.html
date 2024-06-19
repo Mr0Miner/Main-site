@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read More - Video-Viewer</title>
+    <link rel="stylesheet" href="../../../../styles.css">
+    <link rel="shortcut icon" href="../../../../M-W.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazir&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Video-Viewer</h1>
+            <nav>
+                <ul>
+                    <li><a href="/"><i class="fas fa-home"></i> Home Page</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="read-more">
+                <h2>Description</h2>
+                <p>This code is made to play the video by link.</p>
+
+                <h2>Code</h2>
+                <h3><i class="fab fa-html5" style="font-size:30px"></i> HTML <span>index.html</span></h3>
+                <div class="code-container">
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Open video with link | By Mr.Miner&lt;/title&gt;
+
+    &lt;link rel="icon" href="http://miner-site.rf.gd/pc/main/M-W.png" type="image/png"&gt;
+
+    &lt;link rel="stylesheet" href="style.css" type="text/css"&gt;
+    &lt;link rel="js" href="script.js" type="text/js"&gt;
+&lt;/head&gt;
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;button onclick="toggleColorMode()" class="emoji-button"&gt;🌙&lt;/button&gt;
+        &lt;div class="centered-text"&gt;
+            &lt;div&gt;
+                &lt;form action="#" method="get"&gt;
+                    &lt;input type="url" id="videoLink" name="videoLink" placeholder="Paste the video link:"&gt;
+                    &lt;button class="button" id="myButton" type="submit"&gt;Play&lt;/button&gt;
+                    &lt;button class="button" id="copy" type="submit"&gt;copy&lt;/button&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+            
+            &lt;h4&gt;&lt;/h4&gt;
+
+            &lt;div id="videoContainer"&gt;&lt;/div&gt;
+
+            &lt;h4&gt;&lt;/h4&gt;
+
+            &lt;div&gt;
+                &lt;button class="b" id="yourButton" type="button" onclick="downloadVideo()"&gt;Download link&lt;/button&gt;
+            &lt;/div&gt;&lt;br&gt;
+        &lt;/div&gt;
+        &lt;footer&gt;
+            &lt;div class="centered-text"&gt;
+                &lt;p class="sf25"&gt;By Mr.Miner&lt;/p&gt;
+
+                &lt;p class="sf20"&gt;&lt;a target="_blank" href="https://github.com/Mr0Miner/Video-Viewer"&gt;Source code&lt;/a&gt;&lt;/p&gt;
+
+                &lt;p class="sf20"&gt;&lt;a target="_blank" href="https://discord.gg/mAMkpe6nGH"&gt; Discord &lt;/a&gt;&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+        &lt;script src="script.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+                    <button class="copy-btn" id="copy-html" onclick="copyCode('copy-html')">
+                        <i class="fa fa-copy"></i>
+                        <span class="copy-check" id="check-html">✔</span>
+                    </button>
+                </div>
+                <h3><i class="fab fa-css3-alt" style="font-size:30px"></i> CSS <span>style.css</span></h3>
+                <div class="code-container">
+<pre><code>
+h3 {
+    font-size: large;
+    font-weight: bold;
+    color: #121FCF;
+}
+
+h1{
+    font-family: "B Koodak";
+    font-size: 65px;
+}
+
+img {
+    width: 500px;
+}
+
+p {
+    margin: 0;
+    font-weight: bold;
+    background: #121FCF;
+    background: -webkit-linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+    background: -moz-linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+    background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+.sf25 {font-size: 25px;}
+.sf20 {font-size: 20px;}
+
+.centered-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Comic Sans MS";
+    line-height: inherit;
+}
+input {
+    font-family: inherit;
+    line-height: inherit;
+    width: 1000px;
+    padding: 10px 20px;
+}
+.button {
+    cursor: pointer;
+    font-family: inherit;
+    line-height: inherit;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border: 2px solid #222;
+    color: #000000;
+    text-transform: uppercase;
+    transition: .2s background-color ease;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 15%;
+}
+.button:hover,
+.button:active,
+.button:focus {
+    font-family: inherit;
+    line-height: inherit;
+    background-color: #222;
+    padding: 10px 20px;
+    border: 2px solid #222;
+    color: #fff;
+    text-transform: uppercase;
+    transition: .2s background-color ease;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 15%;
+}
+
+.b {
+    cursor: pointer;
+    font-family: inherit;
+    line-height: inherit;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border: 2px solid #222;
+    color: #000000;
+    text-transform: uppercase;
+    transition: .2s background-color ease;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 15%;
+}
+.b:hover,
+.b:active,
+.b:focus {
+    font-family: inherit;
+    line-height: inherit;
+    background-color: #222;
+    padding: 10px 20px;
+    border: 2px solid #222;
+    color: #fff;
+    text-transform: uppercase;
+    transition: .2s background-color ease;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 15%;
+}
+.day-mode {
+    background-color: white;
+    color: black;
+}
+.night-mode {
+    background-color: rgb(35, 35, 35);
+    color: white;
+}
+.emoji-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+</code></pre>
+                    <button class="copy-btn" id="copy-css" onclick="copyCode('copy-css')">
+                        <i class="fa fa-copy"></i>
+                        <span class="copy-check" id="check-css">✔</span>
+                    </button>
+                </div>
+                <h3><i class="fab fa-js" style="font-size:30px"></i> JS <span>script.js</span></h3>
+                <div class="code-container">
+<pre><code>
+let videoLink = "";
+
+document.querySelector("form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    videoLink = document.getElementById("videoLink").value;
+    const videoContainer = document.getElementById("videoContainer");
+    
+    const video = document.createElement("video");
+    video.src = videoLink;
+    video.autoplay = true;
+    video.controls = true;
+
+    videoContainer.innerHTML = "";
+    videoContainer.appendChild(video);
+});
+
+function downloadVideo() {
+    if (videoLink) {
+        const downloadLink = document.createElement("a");
+        downloadLink.href = videoLink;
+        downloadLink.download = "video.mp4";
+        downloadLink.click();
+    } else {
+        alert("Please enter the link first and press the play button.");
+    }
+}
+
+function copyText() {
+    const input = document.getElementById("videoLink");
+    
+    if (input.value) {
+        input.select();
+        input.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+    } else {
+        alert("Please enter the video link first.");
+    }
+}
+
+function toggleColorMode() {
+    const body = document.body;
+    const button = document.querySelector(".emoji-button");
+    if (body.classList.contains("night-mode")) {
+        body.classList.remove("night-mode");
+        button.textContent = "🌙";
+    } else {
+        body.classList.add("night-mode");
+        button.textContent = "☀️";
+    }
+}
+</code></pre>
+                    <button class="copy-btn" id="copy-js" onclick="copyCode('copy-js')">
+                        <i class="fa fa-copy"></i>
+                        <span class="copy-check" id="check-js">✔</span>
+                    </button>
+                </div>
+
+                <h2>Related Images</h2>
+                <img style="max-width: 250px;" src="https://github.com/Mr0Miner/Video-Viewer/raw/main/img/Day.PNG" alt="can't load image" class="example-image">
+                <img style="max-width: 250px;" src="https://github.com/Mr0Miner/Video-Viewer/raw/main/img/Night.PNG" alt="can't load image" class="example-image">
+
+                <h2>Tags</h2>
+                <a href="#"><button class="tags-btn">Video-Viewer</button></a>
+                <a href="#"><button class="tags-btn">Video-Player</button></a>
+                <a href="#"><button class="tags-btn">html</button></a>
+                <a href="#"><button class="tags-btn">Code</button></a>
+                <a href="#"><button class="tags-btn">Miner-Site</button></a>
+                <a href="#"><button class="tags-btn">Show-Code</button></a>
+
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>© 2024 All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="../../../../script.js"></script>
+</body>
+</html>
