@@ -86,32 +86,52 @@ section h2 {
     padding-bottom: 10px;
     margin-bottom: 20px;
     font-size: 2em;
+    text-align: center;
 }
 
-section .content {
+section img {
+    transition: background-color 0.5s, transform 0.5s;
+}
+
+section img:hover {
+    background-color: #495057;
+    transform: scale(1.1);
+}
+
+.code-item {
+    margin-bottom: 20px;
+}
+
+.code-item .content {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-section img {
-    max-width: 48%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.code-item img {
+    max-width: 150px;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-section p {
+.code-item h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #343a40;
+}
+
+.code-item p {
     font-size: 1.1em;
     line-height: 1.6;
+    color: #666666;
 }
 
 .btn {
     display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
+    margin-top: 5px;
+    margin-inline-end: 10px;
+    padding: 8px 18px;
     background-color: #343a40;
     color: #ffffff;
     text-decoration: none;
@@ -121,7 +141,24 @@ section p {
 
 .btn:hover {
     background-color: #495057;
-    transform: scale(1.1);
+    transform: scale(1.03);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 5px;
+    margin-inline-end: 10px;
+    padding: 8px 18px;
+    background-color: #343a40;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #495057;
+    transform: scale(1.03);
 }
 
 footer {
